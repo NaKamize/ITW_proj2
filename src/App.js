@@ -1,13 +1,32 @@
 import "./styles/App.css";
 import Navbar from "./components/Navbar";
 import React from "react";
+import { scroller } from "react-scroll";
 
 export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      offset: 0,
+    };
+
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+
+  handleScroll() {
+    this.setState({ offset: window.pageYOffset });
+  }
+
+  componentDidMount = function () {
+    window.addEventListener("scroll", this.handleScroll);
+  };
+
   render() {
     return (
       <div className="App">
         <header className="App-header" name="header">
-          <Navbar />
+          {this.state.offset < 1000 ? <Navbar /> : ""}
           <div id="socials">
             <span id="facebook">
               <a href="https://www.facebook.com/zelenskiy.official">
@@ -25,8 +44,22 @@ export default class App extends React.Component {
               </a>
             </span>
           </div>
+          <button
+            className="start-btn"
+            onClick={() =>
+              scroller.scrollTo("about", {
+                duration: 800,
+                delay: 0,
+                smooth: "easeInOutQuart",
+              })
+            }
+          >
+            Začni!
+          </button>
+          <h1 id="slogan">... za slobodu ...</h1>
         </header>
         <main className="App-main">
+          {this.state.offset > 1000 ? <Navbar /> : ""}
           <section id="About" name="about">
             <div className="container">
               <h1>kto som ?</h1>
@@ -190,7 +223,11 @@ export default class App extends React.Component {
               <div className="presidency-card">
                 <div className="part col-md-6 col-sm-12">
                   <h2>Vojna</h2>
-                  <img className="col-sm-12" src="../../war.jpg" alt="war"></img>
+                  <img
+                    className="col-sm-12"
+                    src="../../war.jpg"
+                    alt="war"
+                  ></img>
                 </div>
                 <p>
                   Consectetur eiusmod ullamco cillum id do duis do occaecat nisi

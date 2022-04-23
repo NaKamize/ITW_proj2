@@ -8,6 +8,8 @@
 
 /* Header background */
 .App-header {
+    padding-left: 100px;
+    padding-right: 100px;
     background: url("../../public/theme1.jpg");
     background-color: white;
     background-size: cover;
@@ -39,12 +41,41 @@ section {
     margin-bottom: 60px;
 }
 
+.start-btn {
+    background-color: #dbe72f;
+    color: blue;
+    width: 150px;
+    font-size: 25px;
+    font-weight: bolder;
+    height: 80px;
+    border-radius: 20px;
+    position: absolute;
+    top: 66vh;
+    left: 42vw;
+    transition: 0.2s;
+}
+
+.start-btn:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+#slogan {
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    position: absolute;
+    top: 75vh;
+    left: 38vw;
+}
+
 #socials {
     display: flex;
     justify-content: flex-end;
     align-content: center;
-    margin: 10px;
     text-decoration: none;
+    padding: 50px;
 }
 
 /* About section */
@@ -273,6 +304,12 @@ span a:hover {
         align-items: center;
         text-align: center;
     }
+
+    .App-header {
+        padding: 0;
+    }
+
+    .menu {width: 50vw;}
 }
 
 /* Resize queries */
