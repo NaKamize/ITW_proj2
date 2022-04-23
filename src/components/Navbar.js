@@ -28,7 +28,16 @@ export default class Navbar extends React.Component {
           ></i>
         </div>
         <ul className={this.state.burger ? "active menu" : "menu"}>
-          <li className="item">
+          <li
+            className="item"
+            onClick={() =>
+              scroller.scrollTo("header", {
+                duration: 800,
+                delay: 0,
+                smooth: "easeInOutQuart",
+              })
+            }
+          >
             <a href="#home">
               Domov <i className="fas fa-home"></i>
             </a>

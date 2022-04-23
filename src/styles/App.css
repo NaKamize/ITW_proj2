@@ -6,6 +6,7 @@
     line-height: 1.7;
 }
 
+/* Header background */
 .App-header {
     background: url("../../public/theme1.jpg");
     background-color: white;
@@ -15,6 +16,7 @@
     height: 100vh;
 }
 
+/* Footer */
 .App-footer {
     height: 80px;
     background-color: #FFE038;
@@ -45,6 +47,7 @@ section {
     text-decoration: none;
 }
 
+/* About section */
 #About p {
     display: flex;
     justify-content: center;
@@ -53,6 +56,7 @@ section {
     font-weight: 100;
 }
 
+/* Setting up secion titles. */
 div h1 {
     display: flex;
     justify-content: center;
@@ -63,6 +67,7 @@ div h1 {
     padding-bottom: 50px;
 }
 
+/* Header socials. */
 a:link {
     text-decoration: none;
 }
@@ -96,16 +101,12 @@ span a:hover {
     color: #FF0000
 }
 
-[class*="col-"] {
-    float: left;
-    width: 100%;
-}
-
 #about {
     display: flex;
     width: 100%;
 }
 
+/* Education section */
 #Education h2 {
     display: flex;
     justify-content: center;
@@ -139,6 +140,10 @@ span a:hover {
     text-align: center;
 }
 
+.education-item img:hover {
+    box-shadow: 0 16px 16px 0 rgb(226, 231, 158);
+}
+
 .education-item p {
     margin: 20px;
 }
@@ -147,10 +152,133 @@ span a:hover {
     border-radius: 50px;
 }
 
+/* Film section */
+.grid-film {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.film-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.film-card p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.film-card img {
+    padding: 20px;
+}
+
+.film-card h3:hover, #Education h2:hover {
+    color: #FF7A59;
+}
+
+.film-card:hover {
+    box-shadow: 0 8px 16px 0 rgb(185, 185, 255);
+}
+
+/* Presidency secion */
+#Presidency {
+    background-color: #f7f2d5;
+    border-radius: 50px;
+}
+
+.presidency-card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.presidency-card h2 {
+    color: #189cee;
+    padding: 5px;
+}
+
+.presidency-card h2:hover {
+    color: rgb(54, 41, 233)
+}
+
+.presidency-card img {
+    border-radius: 10px;
+}
+
+.presidency-card p {
+    padding: 30px;
+    font-weight: bold;
+    color: rgb(160, 154, 154);
+    border-bottom: 3px dotted rgb(212, 212, 52);
+}
+
+.part {
+    padding: 20px;
+}
+
+/* Placing and aliging every second card to left */
+.presidency-card:nth-child(even) {
+    flex-direction: row;
+    justify-content: left;
+    text-align: left;
+}
+
+.presidency-card:nth-child(odd) {
+    flex-direction: row-reverse;
+    justify-content: right;
+    text-align: right;
+}
+
+/* Adjusting for mobile phone. */
 @media only screen and (max-width: 768px) {
     .education-item {
         flex-direction: column;
     }
+
+    .grid-film {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .App-main {
+        padding: 20px;
+    }
+
+    .presidency-card img {
+        width: inherit;
+    }
+}
+
+/* Grild film readjustment for responsivity same with presidency section */
+@media only screen and (max-width: 1100px) {
+    .grid-film {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .presidency-card:nth-child(odd),
+    .presidency-card:nth-child(even) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Resize queries */
+[class*="col-"] {
+    float: left;
+    width: 100%;
 }
 
 @media only screen and (min-width: 576px) {

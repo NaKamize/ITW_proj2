@@ -6,7 +6,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        <header className="App-header" name="header">
           <Navbar />
           <div id="socials">
             <span id="facebook">
@@ -141,11 +141,126 @@ export default class App extends React.Component {
           <section id="Presidency" name="prec">
             <div className="container">
               <h1>som prezident</h1>
+              <div className="presidency-card">
+                <div className="part col-md-6">
+                  <h2>Kabinet a administrácia</h2>
+                  <img src="../../cabinet.jpg" alt="kabinet"></img>
+                </div>
+                <p>
+                  Sint nisi ullamco veniam dolor elit aute dolore irure. Aliquip
+                  voluptate irure ipsum sit quis esse anim reprehenderit nulla
+                  mollit id. Consectetur nisi in ad officia commodo culpa Lorem
+                  reprehenderit in ex adipisicing proident amet. Proident
+                  commodo id velit ipsum enim ex cupidatat nisi et deserunt enim
+                  nulla. Irure excepteur ex enim mollit aute proident amet.
+                  Officia incididunt duis fugiat proident occaecat eiusmod
+                  fugiat veniam eiusmod anim et eiusmod. Excepteur tempor
+                  voluptate aliqua sit in cupidatat ea esse consequat mollit
+                  culpa commodo.
+                </p>
+              </div>
+
+              <div className="presidency-card">
+                <div className="part col-md-8">
+                  <h2>Pokus o ukončenie konfliktu</h2>
+                  <img src="../../conflikt.jpg" alt="attempt"></img>
+                </div>
+                <p>
+                  Reprehenderit ad cupidatat in cillum non sit incididunt elit
+                  id nulla cillum qui. Tempor qui voluptate dolore incididunt
+                  amet et sunt minim commodo commodo. Commodo laboris nulla
+                  minim nisi laboris nulla labore laborum quis nostrud veniam
+                  ad.
+                </p>
+              </div>
+              <div className="presidency-card">
+                <div className="part col-md-6">
+                  <h2>Zahraničné návštevy</h2>
+                  <img src="../../biden.jpg" alt="met"></img>
+                </div>
+                <p>
+                  Deserunt cillum eiusmod nostrud reprehenderit aliquip
+                  reprehenderit id fugiat qui. Voluptate tempor duis adipisicing
+                  ad quis velit. Non velit labore veniam quis. Labore enim
+                  proident magna dolore reprehenderit ea aliqua labore cupidatat
+                  in excepteur nostrud tempor. Ad et consectetur eu proident
+                  amet anim quis enim voluptate non laborum ex irure.
+                </p>
+              </div>
+              <div className="presidency-card">
+                <div className="part col-md-6 col-sm-12">
+                  <h2>Vojna</h2>
+                  <img className="col-sm-12" src="../../war.jpg" alt="war"></img>
+                </div>
+                <p>
+                  Consectetur eiusmod ullamco cillum id do duis do occaecat nisi
+                  non cupidatat quis non. In dolor occaecat officia commodo
+                  velit esse fugiat do Lorem ex aliqua voluptate minim velit. Ex
+                  aliqua est reprehenderit mollit consectetur deserunt labore
+                  aute. Aute proident do minim anim excepteur culpa incididunt
+                  ea et aliqua anim tempor duis minim. Anim mollit officia sunt
+                  qui ipsum voluptate sint adipisicing. Do deserunt quis ullamco
+                  quis.
+                </p>
+              </div>
             </div>
           </section>
           <section id="Entertainment" name="entr">
             <div className="container">
               <h1>kde som účinkoval ?</h1>
+            </div>
+            <div className="grid-film">
+              <div className="film-card">
+                <h3>Love in the Big City</h3>
+                <img src="../../film1.jpg" alt="love"></img>
+                <p>
+                  Et minim veniam in reprehenderit et est exercitation.
+                  Exercitation ullamco reprehenderit consectetur labore id amet
+                  aliquip.
+                </p>
+              </div>
+              <div className="film-card">
+                <h3>Office Romance. Our Time</h3>
+                <img src="../../film2.jpg" alt="office"></img>
+                <p>
+                  Enim laborum dolore consequat eu magna. Ullamco deserunt
+                  consequat mollit laboris occaecat cupidatat esse nostrud sit
+                  aliquip do culpa.
+                </p>
+              </div>
+              <div className="film-card">
+                <h3>8 New Dates</h3>
+                <img src="../../film3.jpg" alt="Dates"></img>
+                <p>
+                  Laboris nisi esse reprehenderit minim excepteur reprehenderit
+                  non aute occaecat commodo.
+                </p>
+              </div>
+              <div className="film-card">
+                <h3>Servant of the People 2</h3>
+                <img src="../../film4.jpg" alt="people"></img>
+                <p>
+                  Voluptate sunt anim deserunt sint consequat id. Cupidatat
+                  ipsum ut occaecat velit sunt enim proident consectetur
+                  pariatur dolore esse dolore eiusmod in.
+                </p>
+              </div>
+              <div className="film-card">
+                <h3>I, You, He, She</h3>
+                <img src="../../film5.jpg" alt="I"></img>
+                <p>
+                  Laboris in consectetur magna eiusmod non ea deserunt anim
+                  laborum.
+                </p>
+              </div>
+              <div className="film-card">
+                <h3>Love in Vegas</h3>
+                <img src="../../film6.jpg" alt="Vegas"></img>
+                <p>
+                  Laborum consequat tempor ullamco occaecat tempor excepteur
+                  sunt id eu exercitation.
+                </p>
+              </div>
             </div>
           </section>
         </main>
