@@ -66,7 +66,7 @@ section {
     font-size: 50px;
     font-weight: bold;
     position: absolute;
-    top: 75vh;
+    top: 77vh;
     left: 38vw;
 }
 
@@ -287,6 +287,10 @@ span a:hover {
 
     .presidency-card img {
         width: inherit;
+    }
+
+    #slogan {
+        font-size: 30px;
     }
 }
 
